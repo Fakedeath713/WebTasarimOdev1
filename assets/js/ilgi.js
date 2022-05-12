@@ -13,12 +13,15 @@ window.addEventListener('load',
 			.then((response) => {
 				console.log(response)
 				h1.innerHTML = response.title
-				p1.innerHTML = response.description
-				p2.innerHTML = 'The minimum system requirements are:\nGraphics Card:' + response.minimum_system_requirements.graphics
-				+ ' \nMinimum Memory' + response.minimum_system_requirements.memory + ' '+ response.minimum_system_requirements.os 
-				+ '\n	Average Processor Needed:' + response.minimum_system_requirements.processor + 
-				'\nStorage Needed:' + response.minimum_system_requirements.storage
+				d1.innerHTML = response.description
+				r1.innerHTML = 'The minimum system requirements are:' 
+				r2.innerHTML = 'Graphics Card: ' + response.minimum_system_requirements.graphics
+				r3.innerHTML = 'Minimum Memory: ' + response.minimum_system_requirements.memory
+				r4.innerHTML = 'Operating system: ' + response.minimum_system_requirements.os
+				r5.innerHTML = 'Average Processor Needed: ' + response.minimum_system_requirements.processor
+				r6.innerHTML = 'Storage Needed: ' + response.minimum_system_requirements.storage
 				i1.src = response.screenshots[0].image
+				i2.src = response.screenshots[1].image
 			})
 			.catch(err => console.error(err))
   	}, false);
